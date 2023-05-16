@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@300;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-left">
+            <ul>
+                <li>
+                    <img src="assets/images/brandred.png" alt="Logo">
+                </li>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="#">Blog</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <a href="contact-me.html">Contact Me</a>
+        </div>
+    </nav>
+    <!-- tutup navbar -->
+
+    <!-- contact me -->
+    <h2>GET IN TOUCH</h2>
+    <form action="">
+        <div>
+            <label for="name">Nama</label>
+            <input type="text" id="name" placeholder="Nama Kamu" required>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="email@gmail.com" required>
+        </div>
+        <div>
+            <label for="phone">Phone Number</label>
+            <input type="number" id="phone" placeholder="081308130813" required>
+        </div>
+        <div>
+            <label for="subject">Select your program</label>
+            <select name="subject" id="subject" required>
+                <option value="">Front End</option>
+                <option value="">Back End</option>
+                <option value="">Full Stack</option>
+                <option value="">Wordpress</option>
+            </select>
+        </div>
+        <div>
+            <label for="message">Your Message</label>
+            <textarea name="message" id="message" cols="30" rows="4" placeholder="Write your requirements here!"
+                required></textarea>
+        </div>
+        <div class="to-right">
+            <button type="submit" class="submits">Submit</button>
+        </div>
+    </form>
+    <!-- tutup contact me -->
+</body>
+
+</html>
