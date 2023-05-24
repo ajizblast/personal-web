@@ -192,3 +192,7 @@ a {
 .button-action button:hover {
     background-color: orangered;
 }
+
+h2 a {
+    color: black;
+}
