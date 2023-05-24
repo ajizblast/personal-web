@@ -97,7 +97,8 @@ function showData() {
   containerResult.innerHTML += `
         <div class="card-project">
             <img src="${dataProject[i].fileImg}" >
-            <p class="title-project">${dataProject[i].nameProject}</p>
+            <h2><a class="title-project" href="blog-project.html" target="_blank"
+                >${dataProject[i].nameProject}</a></h2>
             <p class="durasi-project">${getDuration(
               dataProject[i].startDate,
               dataProject[i].endDate
