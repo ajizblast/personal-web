@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@300;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-left">
+            <ul>
+                <a href="#"><img src="assets/images/brandred.png" alt="Logo"></a>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="blog-form.html">Blog</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <a href="contact-me.html">Contact Me</a>
+        </div>
+        <div class="hamburger-icon">
+            <button onclick="openHamburger()">
+                <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+            </button>
+            <a href="#"></a>
+        </div>
+    </nav>
+
+    <!-- hamburger menu -->
+    <div class="hamburger-menu">
+        <ul id="hamburger-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog-form.html">Blog</a></li>
+            <li><a href="contact-me.html">Contact Me</a></li>
+            <li><a href="#">Testimonial</a></li>
+        </ul>
+    </div>
+
+    <form onsubmit="getData(event)">
+        <h1>Add My Project</h1>
+
+        <!-- project name -->
+        <div>
+            <label for="nameProject">Project Name</label>
+            <input class="form-input" id="nameProject" type="text">
+        </div>
+
+        <!-- start date--- end date -->
+        <div class="container-date">
+            <div class="date">
+                <label for="startDate">Start Date</label>
+                <input class="form-input" id="startDate" type="date">
+            </div>
+
+            <div class="date">
+                <label for="endDate">End Date</label>
+                <input class="form-input" id="endDate" type="date">
+            </div>
+        </div>
+
+        <!-- description -->
+        <div>
+            <label for="description">Description</label>
+            <Textarea class="form-input" id="description"></Textarea>
+        </div>
+
+        <!-- checklist technologies-->
+        <div class="container-checklist">
+            <h2>Technologies</h2>
+            <div>
+                <div class="card-checklist">
+                    <input type="checkbox" id="nodeJs">
+                    <label for="nodeJs">Node Js</label>
+                </div>
+                <div class="card-checklist">
+                    <input type="checkbox" id="nextJs">
+                    <label for="nextJs">Next Js</label>
+                </div>
+            </div>
+
+            <div>
+                <div class="card-checklist">
+                    <input type="checkbox" id="reactJs">
+                    <label for="reactJs">React Js</label>
+                </div>
+                <div class="card-checklist">
+                    <input type="checkbox" id="typeScript">
+                    <label for="typeScript">Type Script</label>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- upload image -->
+        <div>
+            <label for="file-img">Upload image</label>
+            <input class="form-input" id="fileImg" type="file">
+        </div>
+
+        <!-- button -->
+        <div class="card-button">
+
+            <button class="button-form">submit here</button>
+        </div>
+
+    </form>
+
+    <div class="container-result" id="containerResult">
+        <div class="card-project">
+            <img src="assets/images/mac.jpg">
+            <h2>
+                <a class="title-project" href="blog-project.html" target="_blank">Project Dumbways</a>
+            </h2>
+            <p class="durasi-project"> durasi : 3 bulan</p>
+            <p class="deskripsi-project">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste assumenda
+                expedita nulla aspernatur rerum autem ipsum corporis vero, exercitationem in ipsam voluptatum eos
+                laudantium iusto quos voluptatem hic. Rerum, fugit.</p>
+            <div class="icon-technology">
+                <img id="iconNodeJs" src="assets/images/node-js.png">
+                <img id="iconReactJs" src="assets/images/React-icon.svg.png">
+                <img id="iconNextJs" src="assets/images/next-js.png">
+                <img id="iconTypeScript" src="assets/images/typescript.png">
+            </div>
+            <div class="button-action">
+                <button class="edit">edit</button>
+                <button class="delete">delete</button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/hamburger.js"></script>
+</body>
+
+</html>
