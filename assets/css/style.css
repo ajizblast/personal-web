@@ -37,11 +37,12 @@ nav {
 }
 
 .nav-left ul li a:hover {
-  color: grey;
+  color: orangered;
 }
 
 .nav-left ul li .active {
-  color: grey;
+  color: black;
+  font-weight: 600;
 }
 
 nav img {
