@@ -336,13 +336,15 @@ textarea {
 
 .container-checklist div {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  padding: auto;
 }
 
 .card-checklist {
-  justify-content: space-between;
+  justify-content: baseline;
   align-items: center;
   margin: 20px;
+  margin-left: 0;
 }
 
 .card-checklist input {
@@ -356,7 +358,7 @@ textarea {
 .card-checklist label {
   font-size: 16px;
   cursor: pointer;
-  width: auto;
+  width: max-content;
 }
 
 .card-button {
@@ -640,7 +642,6 @@ a {
 
   form div {
     width: 80%;
-    text-align: center;
   }
 
   .card-button {
@@ -672,8 +673,18 @@ a {
   .artikel {
     text-align: justify;
   }
-}
 
-h2 a {
-  color: black;
+  .container-checklist div {
+    display: flex;
+    flex-wrap: wrap;
+    padding: auto;
+  }
+
+  .card-checklist {
+    justify-content: baseline;
+  }
+
+  h2 a {
+    color: black;
+  }
 }
