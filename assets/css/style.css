@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
   background-color: #e3e7eb;
   font-family: 'Poppins', sans-serif;
 }
@@ -71,23 +72,35 @@ nav img {
 .hamburger-menu ul {
   display: none;
   margin: 0px;
+  padding: 0px;
+  background-color: orangered;
 }
 
 .hamburger-menu ul li {
-  padding: 16px 20px;
+  display: flex;
+  justify-content: center;
+  padding: 8px 20px;
   text-align: center;
   list-style-type: none;
   border: none;
 }
 
+.hamburger-menu ul li div {
+  margin-bottom: 12px;
+}
+
 .hamburger-menu ul li a {
   text-decoration: none;
   color: black;
-  font-weight: bold;
+  font-weight: 600;
+}
+
+.active {
+  font-weight: 900;
 }
 
 .hamburger-menu ul li a:hover {
-  color: orangered;
+  color: gainsboro;
 }
 
 .hamburger-icon {
@@ -95,15 +108,37 @@ nav img {
   margin: 0px 18px 18px;
 }
 
+.hamburger-menu ul li div a {
+  padding: 6px 12px;
+  background-color: white;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  justify-content: center;
+}
+
+.hamburger-menu ul li div a:hover {
+  padding: 6px 12px;
+  background-color: black;
+  margin: 2px;
+  border-radius: 8px;
+  justify-content: center;
+}
+
+
+
+
+
+
+
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* homepage */
 .card {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin: 32px 100px 32px 100px;
-  padding: 24px 76px;
+  width: 80%;
+  margin: 32px auto;
+  padding: 30px;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 6px;
@@ -112,6 +147,28 @@ nav img {
 .card-left {
   text-align: left;
   width: 580px;
+  flex: 2;
+  margin-right: 30px;
+  flex: 50%;
+}
+
+.card-left h1 {
+  text-align: start;
+}
+
+.card-right {
+  flex: 3;
+  width: 300px;
+  margin: 50px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 16px gray;
+}
+
+.card-right img {
+  width: 100%;
+  height: 60%;
+  border-radius: 8px 8px 0 0;
 }
 
 .contact {
@@ -151,10 +208,6 @@ nav img {
   color: #000000;
 }
 
-.card-right {
-  text-align: center;
-}
-
 .card p {
   text-align: justify;
 }
@@ -186,6 +239,7 @@ nav img {
 .desc h2 {
   margin: 0;
   font-size: 22px;
+  text-align: center;
 }
 
 .desc p {
@@ -336,13 +390,15 @@ textarea {
 
 .container-checklist div {
   display: flex;
+  flex-wrap: wrap;
+  padding: auto;
 }
 
 .card-checklist {
-  display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 50px;
+  margin: 20px;
+  margin-left: 0;
 }
 
 .card-checklist input {
@@ -350,12 +406,13 @@ textarea {
   box-shadow: none;
   outline: none;
   cursor: pointer;
+  width: 16px;
 }
 
 .card-checklist label {
   font-size: 16px;
   cursor: pointer;
-  display: block;
+  width: max-content;
 }
 
 .card-button {
@@ -549,129 +606,7 @@ a {
 }
 
 
-@media only screen and (max-width:660px) {
 
-  .nav-right,
-  .nav-left ul li {
-    display: none;
-  }
-
-  .hamburger-icon {
-    display: block;
-  }
-
-  .nav {
-    margin: 0;
-  }
-}
-
-@media screen and (min-width: 661px) {
-  .hamburger-menu {
-    display: none;
-  }
-}
-
-@media only screen and (max-width:660px) {
-  .card {
-    display: flex;
-    flex-direction: column-reverse;
-    padding: 10px;
-  }
-
-  .card-left {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .card-left h1 {
-    text-align: center;
-    font-size: x-large;
-  }
-
-  .card-left p {
-    padding: 24px;
-    text-align: justify;
-  }
-
-  .icon {
-    margin: 10px auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .icon a {
-    margin: 0px;
-  }
-
-  .card-right {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 40px auto;
-  }
-
-  .card {
-    object-fit: fill;
-  }
-
-  .contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-
-  form {
-    max-width: fit-content;
-    margin: 40px auto;
-    align-items: center;
-  }
-
-  h1 {
-    text-align: center;
-  }
-
-  form h1 {
-    text-align: center;
-  }
-
-  form div {
-    width: 80%;
-    text-align: center;
-  }
-
-  .card-button {
-    text-align: center;
-  }
-
-  .button-form {
-    max-width: fit-content;
-  }
-
-  .container-2 {
-    display: flex;
-    flex-direction: column
-  }
-
-  .container-2 .time {
-    margin-top: 24px;
-  }
-
-  div .img-artikel {
-    display: flex;
-    justify-content: center;
-  }
-
-  .img-artikel img {
-    width: 75%;
-  }
-
-  .artikel {
-    text-align: justify;
-  }
-}
 
 /* Testi styling */
 
@@ -723,4 +658,157 @@ a {
 
 h2 a {
   color: black;
+}
+
+
+@media screen and (min-width: 661px) {
+  .hamburger-menu {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width:660px) {
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-bottom: 20px;
+  }
+
+  .nav {
+    margin: 0;
+  }
+
+  .card-left {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+
+  .card-left h1 {
+    text-align: center;
+    font-size: x-large;
+  }
+
+  .card-left p {
+    padding: 24px;
+    text-align: justify;
+    margin-top: 0;
+  }
+
+  .curiculum {
+    margin: 0;
+  }
+
+  .icon {
+    margin: 10px auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .icon a {
+    margin: 0px;
+  }
+
+  .card-right {
+    text-align: center;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .card {
+    object-fit: fill;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  form {
+    max-width: max-content;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  form h1 {
+    text-align: center;
+  }
+
+  form div {
+    width: 80%;
+  }
+
+  .card-button {
+    text-align: center;
+  }
+
+  .button-form {
+    max-width: fit-content;
+  }
+
+  .container-2 {
+    display: flex;
+    flex-direction: column
+  }
+
+  .container-2 .time {
+    margin-top: 24px;
+  }
+
+  div .img-artikel {
+    display: flex;
+    justify-content: center;
+  }
+
+  .img-artikel img {
+    width: 75%;
+  }
+
+  .artikel {
+    text-align: justify;
+  }
+
+  .container-checklist div {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: auto;
+  }
+
+  .card-checklist {
+    justify-content: flex-start;
+  }
+
+  h2 a {
+    color: black;
+  }
+
+}
+
+@media only screen and (max-width:780px) {
+
+  .nav-right,
+  .nav-left ul li {
+    display: none;
+  }
+
+  .hamburger-icon {
+    display: block;
+  }
+
+  .nav {
+    margin: 0;
+  }
 }
