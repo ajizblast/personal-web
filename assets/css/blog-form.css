@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(234, 238, 245);
+    font-family: sans-serif;
+}
+
+/* contact form */
+form {
+    width: 500px;
+    margin: 50px auto;
+    padding: 10px;
+}
+
+form div {
+    margin-top: 10px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.container-date {
+    display: flex;
+    justify-content: space-between;
+}
+.date {
+    width: 45%;
+}
+
+
+
+.form-input {
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 15px;
+    border: none;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    
+}
+
+textarea {
+    resize: none;
+    height: 130px;
+}
+
+.container-checklist {
+    display: flex;
+    padding-top: 0;
+    margin-bottom: 20px;
+}
+
+input[type=checkbox]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+.card-checklist {
+    display: flex;
+    margin-right: 50px;
+}
+
+.card-checklist input {
+    /* border-radius: 5px;  */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+
+.card-checklist label {
+    font-size: 15px;
+}
+
+.card-button {
+    text-align: end;
+}
+.button-form {
+    color: white;
+    background-color: rgb(6, 1, 22);
+    padding: 10px 35px;
+    font-size: 15px;
+    border: none;
+    border-radius: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.button-form:hover {
+    background-color: orangered;
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.title-project a {
+    color: black;
+}
+
+.container-result {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color:   white;
+}
+
+.card-project {
+    width: 500px;
+    background-color: white;
+    margin: 20px;
+    padding-top: 7px;
+    box-sizing: border-box;
+    border-radius: 5px; 
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+
+}
+
+.card-project img {
+    display: block;
+    width: 90%;
+    margin-top: 5x;
+    margin: auto;
+    border-radius: 7px;
+}
+
+.title-project {
+    font-weight: 900;
+    display: block;
+    margin-left: 5%;
+}
+
+.durasi-project {
+    display: block;
+    margin-left: 5%;
+    padding: 0;
+    font-size:  11px;
+    margin-top: -15px;
+    color: dimgray;
+}
+.deskripsi-project {
+    display: block;
+    font-size: 13px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.icon-technology {
+    display: inline-block;
+    margin-bottom: 20px;
+    /* background-color: aqua; */
+    margin-left: 5%;
+
+
+}
+.icon-technology img{
+    width: 25px;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+/* button */
+
+.button-action {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.button-action button {
+    width: 45%;
+    height: 30px;
+    border: none;
+    background-color: rgb(6, 1, 22);
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.button-action button:hover {
+    background-color: orangered;
+}

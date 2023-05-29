@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dumbways</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@300;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-left">
+            <ul>
+                <a href="#"><img src="assets/images/brandred.png" alt="Logo"></a>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="blog-form.html">Blog</a>
+                </li>
+                <li>
+                    <a href="testimonial-final.html" class="active">My Testimonials</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <a href="contact-me.html">Contact Me</a>
+        </div>
+        <div class="hamburger-icon">
+            <button onclick="openHamburger()">
+                <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+            </button>
+            <a href="#"></a>
+        </div>
+    </nav>
+    <!-- hamburger menu -->
+    <div class="hamburger-menu">
+        <ul id="hamburger-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog-form.html">Blog</a></li>
+            <li><a href="testimonial-final.html">Testimonial</a></li>
+            <li>
+                <div class="contact-button"><a href="contact-me.html">Contact Me</a></div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Tutup Navbar -->
+
+    <div class="testi-container">
+        <h1>My Testimonials</h1>
+        <h2 style="text-align: center; color: #fe4e30; margin-top: 20px;">Rating by Stars</h2>
+        <div class="rating-btn">
+            <button onclick="showTestimonials()">All</button>
+            <button onclick="filterTestimonials(1)"><i class="fa-solid fa-star"></i>1</button>
+            <button onclick="filterTestimonials(2)"><i class="fa-solid fa-star"></i>2</button>
+            <button onclick="filterTestimonials(3)"><i class="fa-solid fa-star"></i>3</button>
+            <button onclick="filterTestimonials(4)"><i class="fa-solid fa-star"></i>4</button>
+            <button onclick="filterTestimonials(5)"><i class="fa-solid fa-star"></i>5</button>
+        </div>
+        <div class="testi-list" id="testimonials"></div>
+    </div>
+
+    <script src="assets/js/testimonials.js"></script>
+    <script src="assets/js/hamburger.js"></script>
+</body>
+
+</html>
