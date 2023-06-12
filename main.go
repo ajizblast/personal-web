@@ -161,7 +161,8 @@ func blogDetail(c echo.Context) error {
 
 	var blogDetail = Blog{}
 
-	err := connection.Conn.QueryRow(context.Background(), "SELECT id, title, start_date, end_date, content, nodejs, nextjs, reactjs, typescript, image FROM tb_blog WHERE id=$1", id).Scan(&blogDetail.ID, &blogDetail.Title, &blogDetail.StartDate, &blogDetail.EndDate, &blogDetail.Content, &blogDetail.NodeJs, &blogDetail.NextJs, &blogDetail.ReactJs, &blogDetail.TypeScript,  &blogDetail.Image)
+	err := connection.Conn.QueryRow(context.Background(), "SELECT id, title, start_date, end_date, content, nodejs, nextjs, reactjs, typescript, image FROM tb_blog WHERE id=$1", id).Scan(
+&blogDetail.ID, &blogDetail.Title, &blogDetail.StartDate, &blogDetail.EndDate, &blogDetail.Content, &blogDetail.NodeJs, &blogDetail.NextJs, &blogDetail.ReactJs, &blogDetail.TypeScript,  &blogDetail.Image)
 
 	if err != nil {
 	return c.JSON(http.StatusInternalServerError, map[string]string{"message": err.Error()})
@@ -182,7 +183,7 @@ func blogDetail(c echo.Context) error {
 
 	if errTemplate != nil {
 		// fmt.Println("Tidak ada datanya")
-		return c.JSON(http.StatusInternalServerError, map[string]string{"message": errTemplate.Error()})
+		return c.JSON(http.StatusInternalServerError, map[string]string{"message": err.Error()})
 	}
 
 	return tmpl.Execute(c.Response(), data)
@@ -269,10 +270,10 @@ func addBlog(c echo.Context) error {
 	content := c.FormValue("content")
 	startDate := c.FormValue("startDate")
 	endDate := c.FormValue("endDate")
-	nodeJs := c.FormValue("nodeJs")
-	reactJs := c.FormValue("reactJs")
-	nextJs := c.FormValue("nextJs")
-	typescript := c.FormValue("typescript")
+	nodeJs := (c.FormValue("nodeJs") =="nodeJs")
+	reactJs := (c.FormValue("reactJs")=="reactJs")
+	nextJs := (c.FormValue("nextJs") == "nextJs")
+	typescript := (c.FormValue("typescript") == "typescript")
 	image := c.FormValue("input-image")
 
 	fmt.Println(title, content, nodeJs, reactJs, nextJs, typescript, image)
